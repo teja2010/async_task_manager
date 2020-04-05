@@ -1,7 +1,7 @@
 # async_task_manager (WIP)
 
 Build a system which brings a few functional programming concepts to C. The program is made of functions and their connections.
-Submit all functions and a description of connection to build the the program.
+Submit all functions and a description of connection to build the program.
 
 1. Simple task manager which starts N_CPU kernel threads.
 2. Tasks submitted to the manager are run using lightweigth fibers. IO using async IO (epoll).
