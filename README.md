@@ -3,14 +3,23 @@
 Build a system which brings a few functional programming concepts to C. The program is made of functions and their connections.
 Submit all functions and a description of connection to build the program.
 
-1. Simple task manager which starts N_CPU kernel threads.
-2. Tasks submitted to the manager are run using lightweigth fibers. IO using async IO (epoll).
-3. Simple Go-like channel for communication between fibers. fibers can be
+1. Simple task manager which manages N user threads over M kernel threads (M:N model)
+
+2. Tasks submitted to the manager are run using lightweight fibers.
+
+3. IO using async IO (epoll, liuring?).
+
+4. Simple Go-like channel for communication between fibers. fibers can be
    - within the process
    - between processes within a machine
    - between processes across machines
-   
-4. Add new channels and functions without restarting the process. 
+
+5. Build a program as a graph, where nodes are functions and edges are channels.
+
+
+6. Complete control over scheduling & CPU allocation.
+
+7. Add new channels and functions without restarting the process.
 
 ### Resources:
 - https://www.gnu.org/software/pth/pth-manual.html
