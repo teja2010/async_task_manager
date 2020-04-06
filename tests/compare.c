@@ -150,7 +150,7 @@ int main(int argc, char *argv[])
 			longjmp( func_jb, 1 );
 		}
 	}
-	printf("longjmp avg cycles:\t%f\t(%f times direct procedure calls)\n",
+	printf("longjmp avg cycles:\t%f\t(%f times slower than direct procedure calls)\n",
 			((float)sum)/10000.0, ((float)sum)/prev_sum);
 	prev_sum = sum;
 
@@ -174,7 +174,7 @@ int main(int argc, char *argv[])
 		if (swapcontext(&uctx_main, &uctx_func1) == -1)
 			handle_error("swapcontext");
 	}
-	printf("swapcontext avg cycles:\t%f\t(%f times direct longjmp)\n",
+	printf("swapcontext avg cycles:\t%f\t(%f times slower than direct longjmp)\n",
 			((float)sum)/10000.0, ((float)sum)/prev_sum);
 	prev_sum = sum;
 
