@@ -1,6 +1,22 @@
 #include "include/atm.h"
 #include "include/atm_internal.h"
 
+/*
+ *       Init
+ *       |
+ *  +--> Waiting <- recv from chan()
+ *  |    |
+ *  |    Copy args onto stack
+ *  |    |
+ *  |    Running
+ *  |     ------- start f()
+ *  |               |
+ *  |     ------- end of f()
+ *  |    |
+ *  +----+
+ *
+ */
+
 void run_tasks_cycle(int cycles)
 {
 }
