@@ -1,1 +1,19 @@
+!.gitignore
+.*
+*.swp
+
 tests/compare
+
+atm
+atm_controller
+
+# cmake files
+CMakeFiles
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+
+# tags files
+cscope.*
+tags
+TAGS
